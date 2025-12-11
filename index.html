@@ -1,54 +1,128 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-    <!-- Início do cabeçalho do documento com metadados e links -->
-    <meta charset="UTF-8" />
-    <!-- Define a codificação de caracteres como UTF-8 (suporta acentos) -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- Ajusta a escala em dispositivos móveis (layout responsivo) -->
-    <meta
-      name="description"
-      content="Página de Portfólio Profissional Rodrigo s."
-    />
-    <!-- Descrição da página para buscadores -->
+<!DOCTYPE html> 
 
-    <meta name="theme-color" content="#0466C8" />
-    <!-- Cor do tema no navegador mobile (barra superior) -->
-    <meta property="og:title" content="Portfólio Rodrigo S." />
-    <!-- Título para compartilhamento (Open Graph) -->
-    <meta
-      property="og:description"
-      content="Portfólio de Projetos"
-    />
-    <!-- Descrição para compartilhamento (Open Graph) -->
-    <meta property="og:type" content="website" />
-    <!-- Tipo de conteúdo (site) para Open Graph -->
-    <title>Portfólio Rodrigo S.</title>
+<html lang="pt-BR"> 
+    <head> 
+        <meta charset="UTF-8"> 
+        <meta name="viewport" content="width=device-width, initial-scale=1"> 
+        <title>Portfólio Profissional</title> 
 
-    <link rel="stylesheet" href="css/bootstrap.css">
-    <link rel="stylesheet" href="css/style.css">
-</head>
+        <!-- Importar Bootstrap CSS -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
 
-<body>
-    <header class="header">
-        <!-- Seção de Cabeçalho, Profissão, Foto de perfil e resumo profissional (1ª Dobra Desktop)-->
-        <section class="profile-card">
-            <h1 class="profile-title">Desenvolvedor e Analista de Dados</h1>
-            <div class="profile-content">
-                <!-- Imagem de Perfil -->
-                <img src ="image/fotopessoal.jpg" alt="Foto de Perfil" class="profile-photo"></img>
+        <!-- Integração CSS próprio -->
+        <link rel="stylesheet" href="css/style.css">
+    </head> 
+    
+    <!-- Body com classe "shadow-sm" para criar efeito de divisão do conteúdo central -->
+    <body class="shadow-sm"> 
+        <header>
+            <!-- Barra de Navegação Bootstrap -->
+            <!-- Classe "navbar" para criação de barra de navegação responsiva e estilizada-->
+            <!-- Classe "navbar-espand-lg" para garantir expansão em telas telas grandes e colapso em telas pequenas-->
+            <!-- Classe "navbar-dark para estilização com tema escuro e letras claras"--> 
+            <!-- Classe "bg-primary" para utilizar a cor primaria -->
+            <nav class="navbar navbar-expand-lg navbar-dark" id="navbar-top">
 
-                <!-- Subdivisão com texto resumo, tecnologias e botões-->
-                <div>
-                    <p class="profile-description">Me chamo Rodrigo Souza, tenho 28 anos e sou do Espírito Santo. 
-                        Sou graduado em Engenharia Química pela UFES. Atualmente, estou cursando 
-                        Análise e Desenvolvimento de Sistemas pelo IFES com objetivo de aprimorar 
-                        meu conhecimentos em Tecnologia e migrar minha área de atuação profissional. 
-                    </p>
+                <!--Criação de Conteiner Bootstrap com classe "conteiner" para centralização e ajuste de espaçamento -->
+                <div class="container"> 
 
-                    <!-- Ícones das linguagens e frameworks -->
-                    <div class="profile-tech">
-                        <h2 class="profile-title-tech">Linguagens e Framework:</h2>
+                    <!-- Área para inserção de logo/brang da página -->
+                    <!-- Classe "navbar-brand" para estilização da logo da página -->
+                    <!-- tag a para funcionar como botão para recarregar página inicial --> 
+                    <a class="navbar-brand" href="#perfil">Meu Portfólio</a> 
+
+                    <!-- Botão Toggle da Barra de Navegação -->
+                    <!-- Classe "navbar-toggler" para criação do botão estilo toggle -->
+                    <!-- type="button" para forçar que se comporte como botão -->
+                    <!-- data-bs-toggle="collapse" para controlar a visibilidade dos botões do menu -->
+                    <!-- data-bs-target="#navbar-btn" para indicar qual item deve ser controlado pelo botão-toggle -->
+                    <!-- aria-controls="navbar-btn" para indicar as tec. assistivas qual item está sendo controlado -->
+                    <!-- aria-expanded:"false" indicando para tec. assistivas que o existe um botão para ser ativado e que por padrão não está expandido -->
+                    <!-- aria-label para fornecer uma descrição resumo do botão-->   
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-btn" aria-controls="navbar-btn" aria-expanded="false" aria-label="Botão de Navegação para descompactar o Menu"> 
+                        <!-- classe="navbar-toggler-icon" para inserir icone estilizado do botão toggle -->
+                        <span class="navbar-toggler-icon"></span> 
+                    </button>
+                    
+                    <!-- Botões da Barra de Navegação-->
+                    <!-- Classe "collpase" para controlar a visibilidade do conteúdo -->
+                    <!-- Classe "navbar-collapse" para criar estilização da barra de botões de navegação colapsada -->
+                    <!-- id para referenciar o item controlado pelo botão toggle --> 
+                    <div class="collapse navbar-collapse" id="navbar-btn">
+
+                        <!-- Lista de Botões da Barra de Navegação colapsada -->
+                        <!-- classe "navbar-nav" para criar estilização da Barra de Navegação -->
+                        <!-- classe "ms-auto" estilizar o margem da área dos botões (itens) --> 
+                        <ul class="navbar-nav ms-auto"> 
+
+                            <!-- Classe "nav-item" para estilizar o item individual da lista de botões -->
+                            <!-- Classe "nav-link" para estilizar o texto do link, utilizado como título das seções -->
+                            <!-- Classe "active" para completar estilização com indicação  do item ativo (seção aberta) -->
+                            <!-- aria-current="page" para fornecer informação as tec. assistivas de qual item do menu está aberto -->  
+                            <li class="nav-item"> 
+                                <a class="nav-link active" aria-current="page" href="#perfil">Perfil</a> 
+                            </li> 
+                            <li class="nav-item"> 
+                                <a class="nav-link" href="#sobre">Sobre</a> 
+                            </li> 
+                            <li class="nav-item"> 
+                                <a class="nav-link" href="#projetos">Projetos</a> 
+                            </li> 
+                            <li class="nav-item"> 
+                                <a class="nav-link" href="#contato">Contato</a> 
+                            </li> 
+                        </ul> 
+                    </div> 
+                </div> 
+            </nav>
+        </header>
+
+
+        <!-- Conteúdo Principal -->
+        <!-- Grid System Bootstrap classe "Conteiner" para centralizar e limitar a largura do conteúdo -->
+        <!-- Classe "py-5" para criar Padding vertical 3 rem, gerando um espaçamento entre a navbar, footer e o conteúdo -->
+        <!-- Classe "shadow-sm" para criar uma sombra discreta para demarcar o conteúdo principal e gerar profundidade --> 
+        <main class="container py-5 shadow-sm">
+
+            <!-- Seção Perfil -->
+            <!-- Classe "mb-5" - margin-bottom: 3 rem para espaçamento da seção perfil do conteúdo -->
+            <section id="perfil" class="mb-5"> 
+
+                <!-- Linha Grid System Bootsrap com classe "row" -->
+                <!-- classe "align-items-center" para alinhamento vertical dos itens na linha -->
+                <div class="row align-items-center">
+
+                    <!-- Coluna Grid System Bootstrap -->
+                    <!-- Divisão Lateral Foto de Perfil  utilizando 4/12 larguras do Grid System (1/3 largura do conteiner) - Classe Bootstrap:"col-md-4" -->
+                    <!-- Classe "text-center" para centralizar a foto de perfil na largura da coluna --> 
+                    <div class="col-md-4 text-center">
+
+                        <!-- Classe "img-fluid" para tornar a img responsiva (Adicionado max-width: 200px no CSS) -->
+                        <!-- Classe "rounded-circle" para criar bordas arredondadas / "mb-3" - margin-bottom: 1 rem (espaçamento para mobile) --> 
+                        <img src="image/fotopessoal.png" alt="Foto de Perfil" class="img-fluid rounded-circle  mb-3" id="foto-perfil">
+                    </div>
+
+                    <!-- Divisão da Área Principal de Perfil utilizando 8/12 larguras do Grid System (2/3 largura do conteiner) - Classe Bootstrap:"col-md-8" -->
+                    <div class="col-md-8">
+
+                        <!-- Título principal com descrição do cargo, visando melhoria de SEO -->
+                        <!-- Classe "display-4" - aplicar estilo de título hierarquia 4 para destaque, font-size 2.5rem / font-weight: 300 / line-height: 1.2 -->
+                        <h1 id="titulo-profissional">Analista de Dados</h1> 
+
+                        <!-- Título secundário com nome pessoal -->
+                        <!-- Classe "text-primary" - texto com cor primary -->
+                        <h2 id="nome-pessoal">Rodrigo Souza</h2> 
+
+                        <!-- Frase com resumo profissional e CTA -->
+                        <!-- Classe "lead" para destacar o texto-resumo e ajustar os espaçamentos (Adicionado font-weight:400 no CSS)-->
+                        <!-- Classe "mt-3" - margin-top: 1 rem -->  
+                        <p class="mt-3" id="resumo">Profissional dedicado em análise de dados, com habilidades sólidas em desenvolvimento de relatórios, dashboards e automações, pronto para transformar dados em decisões estratégicas e impulsionar resultados.</p>
+                         
+                        <!-- Área de destaque para linguagens e framework -->
+                        <!-- Classe "text-primary" - texto com cor primary / Classe "mt-3" - margin-top: 1 rem -->
+                        <h3 class="mt-3" id="titulo-tech">Linguagens e Framework:</h3>
+
+                        <!-- Logo das linguagens e frameworks com título, descrição alternativa e classe própria "icone" (Adicionado width: calc(30px + 1.5vw) no CSS) -->
                         <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg" title="Python" alt="Ícone Python" class="icones"></img>
                         <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/r/r-original.svg" title="R" alt="Ícone R" class="icones"></img>
                         <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postgresql/postgresql-original.svg" title="PostgreSQL" alt="Ícone PostgreSQL" class="icones"></img>
@@ -56,248 +130,272 @@
                         <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg" title="CSS" alt="Ícone CSS" class="icones"></img>
                         <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg" title="JavaScript" alt="Ícone JavaScript" class="icones"></img>
                         <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/bootstrap/bootstrap-original.svg" title="Bootstrap" alt="Ícone Bootstrap" class="icones"></img>
-                    </div>
-
-                    <!-- Botões direcionados para as seções de Projetos e Contato-->
-                    <div class="profile-buttons">
-                        <ul class="nav nav-pills nav-fill gap-2 p-1 small bg-primary rounded-5 shadow-sm" id="pillNav2" role="tablist" style="--bs-nav-link-color: var(--bs-white); --bs-nav-pills-link-active-color: var(--bs-primary); --bs-nav-pills-link-active-bg: var(--bs-white);">
-                            <li class="nav-item" role="presentation">
-                                <button class="nav-link active rounded-5" id="home-tab2" data-bs-toggle="tab" type="button" role="tab" aria-selected="true">Perfil</button>
-                            </li>
-                            <li class="nav-item" role="presentation">
-                                <button class="nav-link rounded-5" id="contact-tab2" data-bs-toggle="tab" type="button" role="tab" aria-selected="false">Projetos</button>
-                            </li>
-                            <li class="nav-item" role="presentation">
-                                <button class="nav-link rounded-5" id="contact-tab2" data-bs-toggle="tab" type="button" role="tab" aria-selected="false">Contato</button>
-                            </li>
-                        </ul>
-                    </div>
                     
-                </div>                
-            </div>   
-        </section>
-    </header>
-
-    <main class="main-content">
-
-        <!-- Subdivisão com as informações acadêmicas, habilidades e redes sociais (2ª Dobra Desktop)-->
-        <div class="habilidade-formacao-rede-social">
-
-            <!-- Seção com as informações acadêmicas -->
-            <section class="formacao">
-                <h2 class="title-section">Formação Academica</h2>
-
-                <div class="graduacao-card">
-                    <h3 class="subtitle-section">Bacharelado em Engenharia Química</h3>
-                    <p class="info-add-section">Universidade Federal do Espírito Santo (2016 - 2021)</p>
-
-                    <h4>Conhecimentos Específicos</h4>
-                    <ul class="lista-conhecimento-habilidade">
-                        <li>Fenômenos de transporte: Transferência de massa, calor e quantidade de movimento.</li>
-                        <li>Termodinâmica e cinética química: Análise de processos energéticos e reações químicas</li>
-                        <li>Processos industriais: Operações unitárias (destilação, filtração, secagem, extração, etc.).</li>
-                        <li>Tecnologia de materiais: Polímeros, cerâmicas, metais e compósitos.</li>
-                        <li>Controle e automação de processos: Instrumentação, modelagem e simulação.</li>
-                        <li>Gestão e sustentabilidade: Economia de processos, segurança industrial e impacto ambiental.</li>
-                    </ul>        
+                    </div>
                 </div>
-
-                <div class="graduacao-card">
-                    <h3 class="subtitle-section">Tecnologo em Análise e Desenvolvimento de Sistemas</h3>
-                    <p class="info-add-section">Instituto Federal do Espírito Santo (2025 - 2028)</p>
-
-                    <h4>Conhecimentos Específicos em Aprendizado</h4>
-                    <ul class="lista-conhecimento-habilidade">
-                        <li>Fundamentos de computação: lógica de programação, algoritmos e estruturas de dados.</li>
-                        <li>Linguagens de programação, marcação e framework: Python, C, JavaScript, HTML, CSS e Bootstrap.</li>
-                        <li>Banco de dados: modelagem, SQL, administração e integração de dados.</li>
-                        <li>Engenharia de software: metodologias ágeis, ciclo de vida de sistemas, testes e qualidade.</li>
-                        <li>Arquitetura de sistemas: análise de requisitos, design de software e integração de aplicações.</li>
-                        <li>Redes e segurança da informação: protocolos, infraestrutura e práticas de proteção de dados.</li>
-                        <li>Tecnologias web e mobile: desenvolvimento de aplicações responsivas e multiplataforma.</li>
-                    </ul>
-                </div>
-
             </section>
 
-            <!-- Divisão com agrupamento das seções de habilidades e rede social -->
-            <!-- Divisão utilizada como barra lateral no layout Desktop -->
-            <div>
+            <!-- Conteúdo principal, divisão de acordo com o Grid System Bootstrap-->
+            <!-- Linha da primeira camada de conteúdo (Barra Lateral: Sobre / Área Principal: Projetos)-->
+            <div class="row">
 
-                <!-- Seção com as habilidades -->
-                <section class="habilidades">
-                    <h2 class="title-section">Habilidades</h2>
+                <!-- Divisão da Barra Lateral Sobre utilizando 4/12 larguras do Grid System (1/3 largura do conteiner) - Classe Bootstrap:"col-md-4" -->
+                <div class="col-md-4" id="sidebar">
 
-                    <div class="habilidades-card">
-                        <h3 class="subtitle-section">Habilidades Adquiridas</h3>
-                        <ul class="lista-conhecimento-habilidade">
-                            <li>Análise e resolução de problemas complexos.</li>
-                            <li>Tomada de decisão baseada em dados.</li>
-                            <li>Modelagem e otimização de processos.</li>
-                            <li>Trabalho em equipe multidisciplinar.</li>
-                            <li>Uso de softwares de simulação e ferramentas computacionais.</li>
-                            <li>Capacidade de inovação e pesquisa aplicada.</li>
+                    <!-- Seção Sobre inserido dentro do Grid System Bootstrap -->
+                    <!-- Classe "mb-5" - margin-bottom: 3 rem de espaçamento da seção Contato --> 
+                    <section class="mb-5">
+
+                        <!-- Classe "mb-4" - margin-bottom: 1.5 rem de espaçamento título Sobre para o Subtítulo -->
+                        <h2 id="sobre" class="mb-4">Sobre</h2>
+                        <h3 id="subtitle-sobre">Formação Acadêmica</h3>
+
+                        <!-- Lista de Formação Acadêmica com classe "list-unstyled" para remover a formação de tópicos da lista -->
+                        <!-- Classe "text-primary" - texto com cor primary (Adicionado font-size: 1.3rem no CSS) --> 
+                        <!-- Classe "lead" para destacar texto e ajustar espaçamento (Adicionado font-size: font-size: 1.1rem e font-weight: 500 no CSS) -->
+                        <!-- Classe "mb-3" - margin-bottom: 1 rem--> 
+                        <ul class="list-unstyled">
+                            <li>
+                                <h4 id="graduacao">Análise e Desenvolvimento de Sistemas</h4>
+                                <p class="mb-3" id="instituicao">Instituto Federal do Espírito Santo (2025 - 2028)</p>
+                            </li>
+                            <li>
+                                <h4 id="graduacao">Engenharia Química</h4>
+                                <p class="mb-3" id="instituicao">Universidade Federal do Espírito Santo (2016 - 2021)</p>
+                            </li>    
                         </ul>
-                    </div>
+                        
+                        <!-- Botão toggle Habilidades para economizar espaço da 1 dobra em telas mobiles e deixar design mais limpo -->
+                        <!-- Classe "btn" para estilizar botão com espaçamento, borda, hover e ponteiro -->
+                        <!-- Classe "dropdown-toggle" para estilizar com ícone seta para baixo, indicando que existe conteúdo para exibir-->
+                        <!-- type="button" para forçar que se comporte como botão -->
+                        <!-- data-bs-toggle="collapse" para controlar a visibilidade dos botões do menu -->
+                        <!-- data-bs-target="#habilidades-li" para indicar qual item deve ser controlado pelo botão-toggle -->
+                        <!-- aria-controls="habilidades-li" para indicar as tec. assistivas qual item está sendo controlado -->
+                        <!-- aria-expanded:"false" indicando para tec. assistivas que o existe um botão para ser ativado e que por padrão não está expandido -->
+                        <!-- aria-label para fornecer uma descrição resumo do botão-->   
+                        <div>
+                            <button  id="btnOpen-Habilidades" class="btn" type="button" aria-expanded="false" aria-controls="habilidades-li" aria-label="Botão para exibir lista de habilidades">
+                                <div class="btn-habilidades">
+                                    <h3 id="subtitle-sobre">Habilidades</h3> 
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" class="icones-btn"><!--!Font Awesome Free v7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path d="M300.3 440.8C312.9 451 331.4 450.3 343.1 438.6L471.1 310.6C480.3 301.4 483 287.7 478 275.7C473 263.7 461.4 256 448.5 256L192.5 256C179.6 256 167.9 263.8 162.9 275.8C157.9 287.8 160.7 301.5 169.9 310.6L297.9 438.6L300.3 440.8z"/></svg>                            
+                                </div>
+                            </button>
 
-                    <div  class="habilidades-card">
-                        <h3 class="subtitle-section">Habilidades em Aprendizado</h3>
-                        <ul class="lista-conhecimento-habilidade">
-                            <li>Analisar e modelar problemas para propor soluções computacionais eficientes.</li>
-                            <li>Desenvolver e manter sistemas com foco em qualidade, escalabilidade e usabilidade.</li>
-                            <li>Gerenciar projetos de TI considerando prazos, custos e requisitos técnicos.</li>
-                            <li>Comunicar ideias técnicas de forma clara para públicos diversos.</li>
-                            <li>Aprender continuamente novas linguagens, frameworks e ferramentas.</li>
-                            <li>Trabalho multidisciplinar com aplicação de metodologias ágeis.</li>
-                        </ul>
-                    </div>
+                            <button  id="btnClose-Habilidades" class="btn" type="button" aria-expanded="false" aria-controls="habilidades-li" aria-label="Botão para ocultar lista de habilidades">
+                                <div class="btn-habilidades">
+                                    <h3 id="subtitle-sobre">Habilidades</h3> 
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" class="icones-btn"><!--!Font Awesome Free v7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path d="M300.3 199.2C312.9 188.9 331.4 189.7 343.1 201.4L471.1 329.4C480.3 338.6 483 352.3 478 364.3C473 376.3 461.4 384 448.5 384L192.5 384C179.6 384 167.9 376.2 162.9 364.2C157.9 352.2 160.7 338.5 169.9 329.4L297.9 201.4L300.3 199.2z"/></svg>
+                                </div>
+                            </button>
 
-                </section>
+                            <!-- Classe "collpase" para controlar visibilidade do conteúdo -->
+                            <!-- Classe "collapse-vertical" para indicar a orientação que o conteúdo deve ser exibido, estilo vertical utilizado para manter formação da coluna --> 
+                            <div  id="habilidades-li">
 
-                <!-- Seção com os ícones das rede sociai, funcionan como botões para os perfis -->
-                <section class="rede-social">
-                    <h3 class="subtitle-section">Redes Sociais</h3>
-                    <div class="rede-social-card">
-                        <!-- Botão de contato GitHub-->
-                        <a href="https://github.com/RodrigoSouza-tads" class="item-contato" role="button" target="_blank" aria-current="true">
-                            <div class="icones" aria-hidden="true">
-                                <!-- SVG GitHub-->
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640">
-                                <!--!Font Awesome Free v7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path d="M237.9 461.4C237.9 463.4 235.6 465 232.7 465C229.4 465.3 227.1 463.7 227.1 461.4C227.1 459.4 229.4 457.8 232.3 457.8C235.3 457.5 237.9 459.1 237.9 461.4zM206.8 456.9C206.1 458.9 208.1 461.2 211.1 461.8C213.7 462.8 216.7 461.8 217.3 459.8C217.9 457.8 216 455.5 213 454.6C210.4 453.9 207.5 454.9 206.8 456.9zM251 455.2C248.1 455.9 246.1 457.8 246.4 460.1C246.7 462.1 249.3 463.4 252.3 462.7C255.2 462 257.2 460.1 256.9 458.1C256.6 456.2 253.9 454.9 251 455.2zM316.8 72C178.1 72 72 177.3 72 316C72 426.9 141.8 521.8 241.5 555.2C254.3 557.5 258.8 549.6 258.8 543.1C258.8 536.9 258.5 502.7 258.5 481.7C258.5 481.7 188.5 496.7 173.8 451.9C173.8 451.9 162.4 422.8 146 415.3C146 415.3 123.1 399.6 147.6 399.9C147.6 399.9 172.5 401.9 186.2 425.7C208.1 464.3 244.8 453.2 259.1 446.6C261.4 430.6 267.9 419.5 275.1 412.9C219.2 406.7 162.8 398.6 162.8 302.4C162.8 274.9 170.4 261.1 186.4 243.5C183.8 237 175.3 210.2 189 175.6C209.9 169.1 258 202.6 258 202.6C278 197 299.5 194.1 320.8 194.1C342.1 194.1 363.6 197 383.6 202.6C383.6 202.6 431.7 169 452.6 175.6C466.3 210.3 457.8 237 455.2 243.5C471.2 261.2 481 275 481 302.4C481 398.9 422.1 406.6 366.2 412.9C375.4 420.8 383.2 435.8 383.2 459.3C383.2 493 382.9 534.7 382.9 542.9C382.9 549.4 387.5 557.3 400.2 555C500.2 521.8 568 426.9 568 316C568 177.3 455.5 72 316.8 72zM169.2 416.9C167.9 417.9 168.2 420.2 169.9 422.1C171.5 423.7 173.8 424.4 175.1 423.1C176.4 422.1 176.1 419.8 174.4 417.9C172.8 416.3 170.5 415.6 169.2 416.9zM158.4 408.8C157.7 410.1 158.7 411.7 160.7 412.7C162.3 413.7 164.3 413.4 165 412C165.7 410.7 164.7 409.1 162.7 408.1C160.7 407.5 159.1 407.8 158.4 408.8zM190.8 444.4C189.2 445.7 189.8 448.7 192.1 450.6C194.4 452.9 197.3 453.2 198.6 451.6C199.9 450.3 199.3 447.3 197.3 445.4C195.1 443.1 192.1 442.8 190.8 444.4zM179.4 429.7C177.8 430.7 177.8 433.3 179.4 435.6C181 437.9 183.7 438.9 185 437.9C186.6 436.6 186.6 434 185 431.7C183.6 429.4 181 428.4 179.4 429.7z"/></svg>
+                                    <!-- (Adicionado font-size: 1.05rem no CSS )-->
+                                    <ul id="habilidades">
+                                        <li>Análise e resolução de problemas complexos</li>
+                                        <li>Tomada de decisão baseada em dados</li>
+                                        <li>Modelagem e otimização de processos</li>
+                                        <li>Trabalho em equipe multidisciplinar</li>
+                                        <li>Uso de softwares de simulação e ferramentas computacionais</li>
+                                        <li>Capacidade de inovação e pesquisa aplicada</li>
+                                        <li>Analisar e modelar problemas para propor soluções computacionais eficientes</li>
+                                        <li>Desenvolver e manter sistemas com foco em qualidade, escalabilidade e usabilidade</li>
+                                        <li>Comunicar ideias técnicas de forma clara para públicos diversos</li>
+                                        <li>Aprender continuamente novas linguagens, frameworks e ferramentas</li>
+                                        <li>Trabalho multidisciplinar com aplicação de metodologias ágeis</li>
+                                    </ul>
+
                             </div>
-                        </a>
+                        </div>
 
-                        <!-- Botão de contato LinkedIn-->
-                        <a href="#" rule="button"  target="_blank" class="item-contato" aria-current="true">
-                            <div class="icones" aria-hidden="true">
-                                <!-- SVG LinkedIn -->
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640">
-                                <!--!Font Awesome Free v7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path d="M512 96L127.9 96C110.3 96 96 110.5 96 128.3L96 511.7C96 529.5 110.3 544 127.9 544L512 544C529.6 544 544 529.5 544 511.7L544 128.3C544 110.5 529.6 96 512 96zM231.4 480L165 480L165 266.2L231.5 266.2L231.5 480L231.4 480zM198.2 160C219.5 160 236.7 177.2 236.7 198.5C236.7 219.8 219.5 237 198.2 237C176.9 237 159.7 219.8 159.7 198.5C159.7 177.2 176.9 160 198.2 160zM480.3 480L413.9 480L413.9 376C413.9 351.2 413.4 319.3 379.4 319.3C344.8 319.3 339.5 346.3 339.5 374.2L339.5 480L273.1 480L273.1 266.2L336.8 266.2L336.8 295.4L337.7 295.4C346.6 278.6 368.3 260.9 400.6 260.9C467.8 260.9 480.3 305.2 480.3 362.8L480.3 480z"/></svg>
+                        <!-- Botão de Download do Currículo -->
+                        <!-- Classe "btn" para estilizar espaçamento, borda, hover e ponteiro -->
+                        <!-- Classe "btn-primary" para estilizar o botão com a cor primary -->
+                        <!-- Classe "mt-3" - margin-top:1 rem -->   
+                        <div class="mt-3">
+                            <a href="document/Curriculo-Rodrigo.pdf" class="btn btn-primary" download>Download do Currículo</a>
+                        </div>
+
+                    </section>
+
+                    <section class="mb-5">
+                        <h2 class="mb-4" id="contato">Contato</h2>
+                        <h3 class="subtitle-sobre">Redes Sociais</h3>
+                        <div>
+                            <ul class="list-group list-unstyled list-group-horizontal mb-4">
+                                <li class="me-4">
+                                    <a href="https://github.com/RodrigoSouza-tads" target="_blank" rel="noopener noreferrer">
+                                        <figure title="Perfil do GitHub" alt="Ícone do Github para abrir página de perfil" class="icones">
+                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640"><!--!Font Awesome Free v7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.-->
+                                            <path d="M237.9 461.4C237.9 463.4 235.6 465 232.7 465C229.4 465.3 227.1 463.7 227.1 461.4C227.1 459.4 229.4 457.8 232.3 457.8C235.3 457.5 237.9 459.1 237.9 461.4zM206.8 456.9C206.1 458.9 208.1 461.2 211.1 461.8C213.7 462.8 216.7 461.8 217.3 459.8C217.9 457.8 216 455.5 213 454.6C210.4 453.9 207.5 454.9 206.8 456.9zM251 455.2C248.1 455.9 246.1 457.8 246.4 460.1C246.7 462.1 249.3 463.4 252.3 462.7C255.2 462 257.2 460.1 256.9 458.1C256.6 456.2 253.9 454.9 251 455.2zM316.8 72C178.1 72 72 177.3 72 316C72 426.9 141.8 521.8 241.5 555.2C254.3 557.5 258.8 549.6 258.8 543.1C258.8 536.9 258.5 502.7 258.5 481.7C258.5 481.7 188.5 496.7 173.8 451.9C173.8 451.9 162.4 422.8 146 415.3C146 415.3 123.1 399.6 147.6 399.9C147.6 399.9 172.5 401.9 186.2 425.7C208.1 464.3 244.8 453.2 259.1 446.6C261.4 430.6 267.9 419.5 275.1 412.9C219.2 406.7 162.8 398.6 162.8 302.4C162.8 274.9 170.4 261.1 186.4 243.5C183.8 237 175.3 210.2 189 175.6C209.9 169.1 258 202.6 258 202.6C278 197 299.5 194.1 320.8 194.1C342.1 194.1 363.6 197 383.6 202.6C383.6 202.6 431.7 169 452.6 175.6C466.3 210.3 457.8 237 455.2 243.5C471.2 261.2 481 275 481 302.4C481 398.9 422.1 406.6 366.2 412.9C375.4 420.8 383.2 435.8 383.2 459.3C383.2 493 382.9 534.7 382.9 542.9C382.9 549.4 387.5 557.3 400.2 555C500.2 521.8 568 426.9 568 316C568 177.3 455.5 72 316.8 72zM169.2 416.9C167.9 417.9 168.2 420.2 169.9 422.1C171.5 423.7 173.8 424.4 175.1 423.1C176.4 422.1 176.1 419.8 174.4 417.9C172.8 416.3 170.5 415.6 169.2 416.9zM158.4 408.8C157.7 410.1 158.7 411.7 160.7 412.7C162.3 413.7 164.3 413.4 165 412C165.7 410.7 164.7 409.1 162.7 408.1C160.7 407.5 159.1 407.8 158.4 408.8zM190.8 444.4C189.2 445.7 189.8 448.7 192.1 450.6C194.4 452.9 197.3 453.2 198.6 451.6C199.9 450.3 199.3 447.3 197.3 445.4C195.1 443.1 192.1 442.8 190.8 444.4zM179.4 429.7C177.8 430.7 177.8 433.3 179.4 435.6C181 437.9 183.7 438.9 185 437.9C186.6 436.6 186.6 434 185 431.7C183.6 429.4 181 428.4 179.4 429.7z"/></svg>
+                                        </figure>    
+                                    </a>
+                                </li>
+                                <li class="me-4">
+                                    <a href="https://www.linkedin.com/in/rodrigo-ferreira-souza-218376173" target="_blank" rel="noopener noreferrer">
+                                        <figure title="Perfil do LinkedIn" alt="Ícone do LinkedIn para abrir página de perfil" class="icones">
+                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640"><!--!Font Awesome Free v7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path fill="#0a66c2" d="M160 96C124.7 96 96 124.7 96 160L96 480C96 515.3 124.7 544 160 544L480 544C515.3 544 544 515.3 544 480L544 160C544 124.7 515.3 96 480 96L160 96zM165 266.2L231.5 266.2L231.5 480L165 480L165 266.2zM236.7 198.5C236.7 219.8 219.5 237 198.2 237C176.9 237 159.7 219.8 159.7 198.5C159.7 177.2 176.9 160 198.2 160C219.5 160 236.7 177.2 236.7 198.5zM413.9 480L413.9 376C413.9 351.2 413.4 319.3 379.4 319.3C344.8 319.3 339.5 346.3 339.5 374.2L339.5 480L273.1 480L273.1 266.2L336.8 266.2L336.8 295.4L337.7 295.4C346.6 278.6 368.3 260.9 400.6 260.9C467.8 260.9 480.3 305.2 480.3 362.8L480.3 480L413.9 480z"/></svg>
+                                        </figure>    
+                                    </a>
+                                </li>
+                                <li class="me-4">
+                                    <a href="mailto:seuemail@exemplo.com" target="_blank" rel="noopener noreferrer">
+                                        <figure title="Contato E-mail" alt="Ícone do E-mail para contato" class="icones">
+                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640"><!--!Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.-->
+                                            <path fill="#3b82f6" d="M112 128C85.5 128 64 149.5 64 176C64 191.1 71.1 205.3 83.2 214.4L291.2 370.4C308.3 383.2 331.7 383.2 348.8 370.4L556.8 214.4C568.9 205.3 576 191.1 576 176C576 149.5 554.5 128 528 128L112 128zM64 260L64 448C64 483.3 92.7 512 128 512L512 512C547.3 512 576 483.3 576 448L576 260L377.6 408.8C343.5 434.4 296.5 434.4 262.4 408.8L64 260z"/></svg>
+                                        </figure>
+                                    </a>
+                                </li>
+                                <li class="me-4">
+                                    <a href="" target="_blank" rel="noopener noreferrer">
+                                        <figure title="Contato WhatsApp" alt="Ícone do WhatsApp para contato" class="icones">
+                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640"><!--!Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.-->
+                                            <path fill="#25d366" d="M476.9 161.1C435 119.1 379.2 96 319.9 96C197.5 96 97.9 195.6 97.9 318C97.9 357.1 108.1 395.3 127.5 429L96 544L213.7 513.1C246.1 530.8 282.6 540.1 319.8 540.1L319.9 540.1C442.2 540.1 544 440.5 544 318.1C544 258.8 518.8 203.1 476.9 161.1zM319.9 502.7C286.7 502.7 254.2 493.8 225.9 477L219.2 473L149.4 491.3L168 423.2L163.6 416.2C145.1 386.8 135.4 352.9 135.4 318C135.4 216.3 218.2 133.5 320 133.5C369.3 133.5 415.6 152.7 450.4 187.6C485.2 222.5 506.6 268.8 506.5 318.1C506.5 419.9 421.6 502.7 319.9 502.7zM421.1 364.5C415.6 361.7 388.3 348.3 383.2 346.5C378.1 344.6 374.4 343.7 370.7 349.3C367 354.9 356.4 367.3 353.1 371.1C349.9 374.8 346.6 375.3 341.1 372.5C308.5 356.2 287.1 343.4 265.6 306.5C259.9 296.7 271.3 297.4 281.9 276.2C283.7 272.5 282.8 269.3 281.4 266.5C280 263.7 268.9 236.4 264.3 225.3C259.8 214.5 255.2 216 251.8 215.8C248.6 215.6 244.9 215.6 241.2 215.6C237.5 215.6 231.5 217 226.4 222.5C221.3 228.1 207 241.5 207 268.8C207 296.1 226.9 322.5 229.6 326.2C232.4 329.9 268.7 385.9 324.4 410C359.6 425.2 373.4 426.5 391 423.9C401.7 422.3 423.8 410.5 428.4 397.5C433 384.5 433 373.4 431.6 371.1C430.3 368.6 426.6 367.2 421.1 364.5z"/></svg>
+                                        </figure>  
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        
+                        <p class="mt-3">Entre em contato para discutir como posso ajudar a transformar seus dados em insights valiosos!</p>
+                        <button type="button" class="btn btn-primary" id="btnOpen-formContato">Envie uma mensagem</button>
+
+
+                        <div class="card mt-5" id="Conteiner-formContato">
+                            <div class="form-header px-3">
+                                <h4>Formulário de Contato</h4>
+                                <button type="button" class="btn btn-close" id="btnClose-formContato" aria-label="Close"></button>
                             </div>
-                        </a>
+                            
+                            <form class="formContato">
+                                <div class="mb-3">
+                                    <label for="nome" class="form-label">Nome</label>
+                                    <input type="text" class="form-control" id="nome" placeholder="Seu nome" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="email" class="form-label">Email</label>
+                                    <input type="email" class="form-control" id="email" placeholder="seuemail@exemplo.com" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="mensagem" class="form-label">Mensagem</label>
+                                    <textarea class="form-control" id="mensagem" rows="4" placeholder="Escreva sua mensagem aqui..." required></textarea>
+                                </div>
+                                <button type="submit" class="btn btn-primary">Enviar mensagem</button>
+                            </form>
+                            <p id="mensagem-feedback" class="mensagem"></p>
+                        </div>
 
-                        <!-- Botão de contato Whatsapp-->
-                        <a href="#" rule="button"  target="_blank" class="item-contato" aria-current="true">
-                            <div class="icones">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640">
-                                <!--!Font Awesome Free v7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path fill="#25c11a" d="M476.9 161.1C435 119.1 379.2 96 319.9 96C197.5 96 97.9 195.6 97.9 318C97.9 357.1 108.1 395.3 127.5 429L96 544L213.7 513.1C246.1 530.8 282.6 540.1 319.8 540.1L319.9 540.1C442.2 540.1 544 440.5 544 318.1C544 258.8 518.8 203.1 476.9 161.1zM319.9 502.7C286.7 502.7 254.2 493.8 225.9 477L219.2 473L149.4 491.3L168 423.2L163.6 416.2C145.1 386.8 135.4 352.9 135.4 318C135.4 216.3 218.2 133.5 320 133.5C369.3 133.5 415.6 152.7 450.4 187.6C485.2 222.5 506.6 268.8 506.5 318.1C506.5 419.9 421.6 502.7 319.9 502.7zM421.1 364.5C415.6 361.7 388.3 348.3 383.2 346.5C378.1 344.6 374.4 343.7 370.7 349.3C367 354.9 356.4 367.3 353.1 371.1C349.9 374.8 346.6 375.3 341.1 372.5C308.5 356.2 287.1 343.4 265.6 306.5C259.9 296.7 271.3 297.4 281.9 276.2C283.7 272.5 282.8 269.3 281.4 266.5C280 263.7 268.9 236.4 264.3 225.3C259.8 214.5 255.2 216 251.8 215.8C248.6 215.6 244.9 215.6 241.2 215.6C237.5 215.6 231.5 217 226.4 222.5C221.3 228.1 207 241.5 207 268.8C207 296.1 226.9 322.5 229.6 326.2C232.4 329.9 268.7 385.9 324.4 410C359.6 425.2 373.4 426.5 391 423.9C401.7 422.3 423.8 410.5 428.4 397.5C433 384.5 433 373.4 431.6 371.1C430.3 368.6 426.6 367.2 421.1 364.5z"/></svg>
+                    </section>
+                </div>
+
+                <!-- Divisão da Área Principal de Projetos utilizando 8/12 larguras do Grid System (2/3 largura do conteiner) - Classe Bootstrap:"col-md-8"-->
+                <div class="col-md-8">
+
+                    <!-- Seção Projetos com Grid System responsivo, telas pequenas 1 card e telas grandes 3 cards -->
+                    <!-- Classe "mb-5" - margin-bottom: 3 rem de espaçamento da seção Contato --> 
+                    <section id="projetos" class="mb-5">
+
+                        <!-- Classe "mb-4" - margin-bottom: 1.5 rem de espaçamento título Projeto para os cards dos projetos -->
+                        <h2 class="mb-4">Projetos</h2>
+
+                        <!-- Barra de navegação para filtro -->
+
+                        <!-- Classe "row" do Grid System Bootstrap -->
+                        <!-- Classe "row-cols-1" define 1 coluna por linha em telas pequenas -->
+                        <!-- Classe "row-cols-md-3" define 3 colunas por linha em telas médias para cima -->
+                        <!-- Classe "g-4" ajusta espaçamento (gutter) entre colunas e linhas para os cards manterem os espaçamento -->
+                        <!-- Classe "card" para estilizar um container como cartão com sombra e bordas -->
+                        <!-- Classe "h-100" para o cartão preencher 100% height -->
+                        <!-- Classe "card-img-top" para estilizar a imagem no topo do cartão -->
+                        <!-- Classe "card-body" para estilizar a área escrita do cartão -->
+                        <!-- Classe "card-title" para estilizar o título -->
+                        <!-- Classe "card-text" para estilizar o texto resumo do projeto -->
+                        <!-- Classe "card-footer" para estilizar o rodapé do cartão-->
+                        <!-- Classe "text-muted" para definir a cor secundária -->                       
+                        <div class="row row-cols-1 row-cols-md-2  g-4">
+
+                            <!-- Card do Projeto 1 -->
+                            <div class="col card-projeto">
+                                <div class="card h-100">
+
+                                    <!-- Imagem de Capa do Projeto 1 -->
+                                    <img src="image/capa-projeto-01.jpg" class="card-img-top" alt="Projeto 1">
+
+                                    <!-- Corpo do cartão -->
+                                    <div class="card-body">
+                                        <h5 class="card-title">Projeto 1</h5>
+                                        <p class="card-text">Desenvolvimento de dashboards interativos para análise de vendas.</p>
+                                    </div>
+
+                                    <!-- Rodapé do cartão com as tecnologias utilizadas -->
+                                    <div class="card-footer">
+                                        <small class="text-muted">Power BI, Excel</small>
+                                    </div>
+                                </div>
                             </div>
-                        </a>
+                            <!-- Card do Projeto 2 -->
+                            <div class="col card-projeto">
+                                <div class="card h-100">
 
-                        <!-- Botão de contato E-mail-->
-                        <a href="#" rule="button"  target="_blank" class="item-contato" aria-current="true">
-                            <div class="icones">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640">
-                                <!--!Font Awesome Free v7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path d="M112 128C85.5 128 64 149.5 64 176C64 191.1 71.1 205.3 83.2 214.4L291.2 370.4C308.3 383.2 331.7 383.2 348.8 370.4L556.8 214.4C568.9 205.3 576 191.1 576 176C576 149.5 554.5 128 528 128L112 128zM64 260L64 448C64 483.3 92.7 512 128 512L512 512C547.3 512 576 483.3 576 448L576 260L377.6 408.8C343.5 434.4 296.5 434.4 262.4 408.8L64 260z"/></svg>
+                                    <!-- Imagem de Capa do Projeto 2 -->
+                                    <img src="image/capa-projeto-02.jpg" class="card-img-top" alt="Projeto 2">
+
+                                    <!-- Corpo do Cartão -->
+                                    <div class="card-body">
+                                        <h5 class="card-title">Projeto 2</h5>
+                                        <p class="card-text">Automação de relatórios financeiros utilizando Python.</p>
+                                    </div>
+
+                                    <!-- Rodapé do cartão com as tecnologias utilizadas -->
+                                    <div class="card-footer">
+                                        <small class="text-muted">Python, Excel</small>
+                                    </div>
+                                </div>
                             </div>
-                        </a>
 
-                    </div>
+                            <!-- Card do Projeto 3 -->
+                            <div class="col card-projeto">
+                                <div class="card h-100">
 
-                </section>
+                                    <!-- Imagem de Capa do Projeto 3 -->
+                                    <img src="image/capa-projeto-03.jpg" class="card-img-top" alt="Projeto 3">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Projeto 3</h5>
+                                        <p class="card-text">Modelagem e otimização de processos comerciais.</p>
+                                    </div>
 
+                                    <!-- Rodapé do cartão com tecnologias utilizadas -->
+                                    <div class="card-footer">
+                                        <small class="text-muted">Excel, Power BI</small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
             </div>
-        </div>
 
 
-        <section class="projetos" id="Projetos">
-            <h2 class="title-section">Projetos</h2>
 
-            <div id="carouselExampleCaptions" class="carousel slide">
-                <div class="carousel-indicators">
-                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
-                </div>
-                <div class="carousel-inner">
-                    <div class="carousel-item active">
-                        <img src="..." class="d-block w-100" alt="...">
-                        <div class="carousel-caption d-none d-md-block">
-                            <h5>First slide label</h5>
-                            <p>Some representative placeholder content for the first slide.</p>
-                        </div>
-                    </div>
-                    <div class="carousel-item">
-                        <img src="..." class="d-block w-100" alt="...">
-                        <div class="carousel-caption d-none d-md-block">
-                            <h5>Second slide label</h5>
-                            <p>Some representative placeholder content for the second slide.</p>
-                        </div>
-                    </div>
-                    <div class="carousel-item">
-                        <img src="..." class="d-block w-100" alt="...">
-                        <div class="carousel-caption d-none d-md-block">
-                            <h5>Third slide label</h5>
-                            <p>Some representative placeholder content for the third slide.</p>
-                        </div>
-                    </div>
-                </div>
-                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Previous</span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Next</span>
-                </button>
+
+
+        </main>
+
+        <!-- Rodapé -->
+        <footer class="bg-primary text-white text-center py-3">
+            <div class="container">
+                <small>&copy 2025 Rodrigo Souza. Todos os direitos reservados.</small>
             </div>
-        </section>
+        </footer>
 
-        
-        <section class="contato">
-            <h2 class="title-section" id="Contato">Contato</h2>
-            
-            <form class="contato-card">
-                <h3 class="subtitle-section">Envie sua mensagem</h3>
-                <!-- Label Nome, input de texto obrigatório com mínimo de 3 caracteres -->
-                <div class="form-contato">
-                    <label for="nome">Nome Completo</label>
-                    <input type="text" name="nome" id="nome" required aria-required="true" minlength="3" placeholder="Digite o seu nome completo">
-                </div>
-                
-                <!-- Label E-mail, input obrigatório com placeholder -->
-                <div class="form-contato">
-                    <label for="email">E-mail</label>
-                    <input type="email" nome="email" id="email" required aria-required="true" placeholder="exemplo@email.com">
-                </div>
-                
-                <!-- Label Telefone, input obrigatório com placeholder e patern -->
-                <div class="form-contato">
-                    <label for="telelefone">Telefone/Celular</label>
-                    <input type="tel" nome="telefone" id="telefone" required aria-required="true" pattern="^\(\d{2}\) \d{5}-\d{4}$" placeholder="(XX) XXXXX-XXXX">
-                </div>
+        <!-- Importar Bootstrap JS -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 
-                <!-- Label TextArea, Mensagem de Contato, input obrigatório com limite máximo e mínimo, placeheolder-->
-                <div class="form-contato">
-                    <label for="mensagem">Mensagem</label>
-                    <textarea nome="mensagem" id="mensagem" required aria-required="true" minlength="50" maxlength="1000" rows="6" placeholder="Escreva sua mensagem de contato."></textarea>
-                </div>
+        <!-- Integração JavaScript -->
+        <script src="js/script.js"></script> 
 
-                <!-- Label Checkbox de confirmação de termos de uso dos dados de contatos, input obrigatório -->
-                <div class="form-contato">
-                    <label for="termos-de-uso">Termos de Uso</label>
-                    <div class="checkbox-termos-de-uso">
-                        <input type="checkbox" id="termos-de-uso" nome="termos-de-uso" required aria-required="true">
-                        <span class="termos">Aceito os termos</span>
-                    </div>
-                </div>
-
-                <!-- Botão de envio -->
-                <div class="form-contato">
-                    <button type="submit" class="btn-contato">Enviar mensagem</button>
-                </div>
-
-            </form>
-        </section>
-
-    </main>
-   
-    <footer class="footer">
-        <p>&copy 2025 - Rodrigo Souza - Todos os direitos reservados.</p>
-        <p>Desenvolvido em HTML, CSS, JS e Bootstrap.</p>
-    </footer>    
-
-    <script src="js/script.js"></script>
-    <script src="js/bootstrap.bundle.js"></script>
-</body>
+    </body> 
 </html>
