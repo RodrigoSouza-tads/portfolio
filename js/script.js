@@ -1,5 +1,6 @@
 document.addEventListener('DOMContentLoaded', function() {
 
+    // Lógica de Abertura da Lista de Habilidades
     const btnOpenHabilidades = document.getElementById('btnOpen-Habilidades');
     const btnCloseHabilidades = document.getElementById('btnClose-Habilidades');
     const habilidades = document.getElementById('habilidades-li');
@@ -21,6 +22,8 @@ document.addEventListener('DOMContentLoaded', function() {
         habilidades.style.display = 'none';
     });
 
+    // Lógica de Abertura do Formulário de Contato
+    //// Botão de Abertura do Formulário
     const btnOpenFormContato = document.getElementById('btnOpen-formContato');
     const conteinerFormContato = document.getElementById('Conteiner-formContato')
 
@@ -29,13 +32,14 @@ document.addEventListener('DOMContentLoaded', function() {
         btnOpenFormContato.style.display = 'none'
     });
 
+    //// Botão de Fechamento do Formulário
     const btnCloseFormContato = document.getElementById('btnClose-formContato');
     btnCloseFormContato.addEventListener('click',()=>{
         conteinerFormContato.style.display = 'none';
         btnOpenFormContato.style.display = 'block'
     })
 
-    // --- Lógica do Formulário de Demonstração ---
+    // --- Lógica do Formulário ---
     const formContato =document.getElementById('formContato')
     if (formContato) {
         const mensagemFeedback = document.getElementById('mensagem-feedback');
@@ -57,9 +61,6 @@ document.addEventListener('DOMContentLoaded', function() {
                 
             } else { 
                 mensagemFeedback.innerText = `Obrigado, ${nome}! Mensagem enviada.`;
-                setTimeout(() => {
-                    console.log("Já se passaram mais 3 segundos!");
-                }, 3000);
                 formContato.reset();
                 conteinerFormContato.style.display = 'none';
                 btnOpenFormContato.style.display = 'block';

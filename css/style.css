@@ -1,14 +1,13 @@
-/* ---- Importação de Fontes e Variáveis de Cor ---- */
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&family=Roboto+Mono:wght@400;500&display=swap');
+/* ---- Importação de Fonte ---- */
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght,XOPQ,XTRA,YOPQ,YTDE,YTFI,YTLC,YTUC@8..144,100..1000,96,468,79,-203,738,514,712&display=swap');
+
 
 :root {            
     --color-background:#f0f0f0;
-    --color-background-bodycard:#f9f9f9;
-    --color-primary:#0d6efd;
-    --color-muted:#05439f;                      
-    --color-text-principal:#010101;                
-    --color-text-extra: #FFFFFF;                
-    --font: 'Roboto', sans-serif;                 
+    --color-background-bodycard:#FFFFFF;
+    --color-primary:#0d6efd;                     
+    --color-text-principal:#010101;                            
+    --font:"Roboto", sans-serif;                 
 }
 
 
@@ -26,6 +25,9 @@ html {
 
 body{
     background-color: var(--color-background);
+    color:var(--color-text-principal);
+    font-family:var(--font);
+    
 }
 
 #navbar-top{
@@ -51,13 +53,13 @@ h1{
 
 h2{
     font-size: calc(1.5rem + 0.5vw);
-    font-weight: 400;
+    font-weight: 500;
 }
 
 h3{
     font-size: calc(1.25rem + 0.5vw);
     color:var(--color-primary);
-    font-weight: 400;
+    font-weight: 500;
 }
 
 h4{
@@ -75,30 +77,39 @@ p, #habilidades{
 }
 
 small{
-    font-size: 1.0rem;
+    font-size: 0.80rem;
 }
 
+#resumo, #frase-contato, #desc-projeto{
+    text-align: justify;
+}
 
-.btn-habilidades{
-    background: none; 
-    border: none;          
-    padding: 0;           
-    margin: 0;             
-    cursor: pointer;       
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-
+#graduacao{
+    font-weight: 500;
 }
 
 #btnOpen-Habilidades{
     display: block;
     padding-left: 0;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+#btnOpen-Habilidades:hover {
+    border: 1px solid var(--color-primary);
+    border-radius: 4px;
 }
 
 #btnClose-Habilidades{
     display: none;
     padding-left: 0;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+#btnClose-Habilidades:hover {
+    border: 1px solid var(--color-primary);
+    border-radius: 4px;
 }
 
 #habilidades-li{
@@ -109,7 +120,7 @@ small{
 #Conteiner-formContato{
     display: none;
     padding: 1rem;
-
+    background-color: var(--color-background-bodycard);
 }
 
 .form-header{
@@ -119,18 +130,17 @@ small{
     justify-content:space-between;
 }
 
-.card-projeto{
-    display: block;
+.card-body{
+    background-color: var(--color-background-bodycard);
 }
 
-
-
-.show{
-    display: block;
+#tech-projetos{
+    color:var(--color-primary);
 }
 
-
-@media (min-width: 768px) {
-
+@media (max-width: 768px) {
+    #resumo, #frase-contato{
+        padding-right: 1.5rem;
+    }
 
 }
